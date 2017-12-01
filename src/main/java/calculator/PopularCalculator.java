@@ -1,13 +1,13 @@
 package calculator;
 
-//There is no Interface what so wever
+//There is no Interface what so ever
 public class PopularCalculator {
 
-	public int add(int a, int b) {
+	public int add(final int a, final int b) {
 		return a + b;
 	}
 
-	public int sub(int a, int b) {
+	public int sub(final int a, final int b) {
 		return a - b;
 	}
 }

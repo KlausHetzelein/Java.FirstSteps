@@ -1,7 +1,7 @@
 package calculator;
 
 public interface ICalculator {
-	public int add(int a, int b);
+    public int add(final int a, final int b);
 
-	public int sub(int a, int b);
+    public int sub(final int a, final int b);
 }
