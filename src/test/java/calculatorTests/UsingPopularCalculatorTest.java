@@ -2,6 +2,7 @@ package calculatorTests;
 
 import calculator.PopularCalculator;
 import calculator.UsingPopularCalculator;
+import sun.invoke.util.VerifyAccess;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -41,10 +42,12 @@ public class UsingPopularCalculatorTest
     @Test
     public void testAddWithAutoMocks()
     {
-        when(populalarCalculatorMock.add(2, 3)).thenReturn(7);
+        when(populalarCalculatorMock.add(2, 3)).thenReturn(7).thenReturn(5);
 
-        final int result = sut.add(2, 3);
+        assertEquals(7, sut.add(2, 3));
+        assertEquals(5, sut.add(2, 3));
 
-        assertEquals(7, result);
+        verify(populalarCalculatorMock, times(2)).add(anyInt(), anyInt());
+        verifyNoMoreInteractions(populalarCalculatorMock);
     }
 }
