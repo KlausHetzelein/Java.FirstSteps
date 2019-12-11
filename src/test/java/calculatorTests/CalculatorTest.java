@@ -54,6 +54,7 @@ public class CalculatorTest
         // dafür gesorgt haben, dass das gemockte Objekt an unsere zu
         // testende Klasse übergeben wird.
         //
+        @SuppressWarnings("unused")
         final ICalculator secondCalculator = mock(ICalculator.class);
 
         // das geht und überschreibt den injecteden mock und führt zum Scheitern

@@ -2,8 +2,6 @@ package calculatorTests;
 
 import calculator.PopularCalculator;
 import calculator.UsingPopularCalculator;
-import sun.invoke.util.VerifyAccess;
-
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
